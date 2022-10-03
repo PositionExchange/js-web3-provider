@@ -154,7 +154,7 @@ describe("PosiWeb3Provider constructor tests", () => {
     const request = {
       method: "personal_sign",
       params: [
-        '{"version":"0.1.2","timestamp":"1602823075","token":"0x4b0f1812e5df2a09796481ff14017e6005508003","type":"vote","payload":{"proposal":"QmSV53XuYi28XfdNHDhBVp2ZQwzeewQNBcaDedRi9PC6eY","choice":1,"metadata":{}}}',
+        "{\"version\":\"0.1.2\",\"timestamp\":\"1602823075\",\"token\":\"0x4b0f1812e5df2a09796481ff14017e6005508003\",\"type\":\"vote\",\"payload\":{\"proposal\":\"QmSV53XuYi28XfdNHDhBVp2ZQwzeewQNBcaDedRi9PC6eY\",\"choice\":1,\"metadata\":{}}}",
         "0x9d8A62f656a8d1615C1294fd71e9CFb3E4855A4F",
       ],
       id: 1602823075454,
