@@ -35,6 +35,7 @@ describe("PosiWeb3Provider constructor tests", () => {
     const provider = new posiwallet.Provider({ ethereum: {} });
     const web3 = new Web3(provider);
     expect(web3.currentProvider.constructor.name).toBe("PosiWeb3Provider");
+    expect(web3.currentProvider.isPosi).toBe(true);
   });
 
   test("test Ethereum setAddress", () => {
