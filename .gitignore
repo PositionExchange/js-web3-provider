@@ -1,0 +1,24 @@
+.idea
+.DS_Store
+
+# JS
+node_modules/
+jspm_packages/
+staging/
+.build/
+
+# Generated files
+bin/
+gen/
+
+# Log Files
+*.log
+
+# Solidity Coverage fiels
+coverage/
+coverage.json
+
+# Vim swap files
+*.swp
+*.swo
+*~

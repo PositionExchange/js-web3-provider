@@ -1,0 +1,46 @@
+{
+  "name": "posi-web3-provider",
+  "version": "1.0.0",
+  "description": "POSI Web3 Provider",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:PositionExchange/posi-web3-provider.git"
+  },
+  "keywords": [],
+  "author": "Support <support@posichain.org>",
+  "license": "MIT",
+  "scripts": {
+    "build": "npx browserify src/index.js -t [ babelify --presets [ @babel/preset-env ] ] | uglifyjs > dist/posi.min.js",
+    "lint": "node_modules/.bin/eslint . --fix",
+    "test": "node_modules/.bin/jest",
+    "lfs-fix": "git rm --cached --force dist/posi.min.js && git add dist/posi.min.js"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "dependencies": {
+    "@metamask/eth-sig-util": "^4.0.1",
+    "@solana/web3.js": "^1.5.0",
+    "bs58": "^4.0.1",
+    "buffer": "^5.6.0",
+    "events": "^3.2.0",
+    "isutf8": "^3.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/preset-env": "^7.16.11",
+    "babelify": "^10.0.0",
+    "browserify": "^17.0.0",
+    "eslint": "^8.7.0",
+    "ethereumjs-util": "^7.0.5",
+    "jest": "^27.4.7",
+    "uglify-js": "^3.15.0",
+    "web3": "^0.20.7",
+    "whatwg-fetch": "^3.6.2"
+  },
+  "jest": {
+    "verbose": true,
+    "testEnvironment": "jsdom",
+    "globals": {}
+  }
+}
